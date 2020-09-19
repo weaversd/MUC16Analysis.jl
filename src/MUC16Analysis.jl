@@ -1,5 +1,8 @@
 module MUC16Analysis
 
-# Write your package code here.
+function test()
+  println("This works")
+end
+export test
 
 end
