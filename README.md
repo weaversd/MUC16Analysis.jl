@@ -14,5 +14,5 @@ using MUC16Analysis
 
 workflow:
 
-fasta sequence file of aa sequences to compare -> distance matrix -> upgma -> newick file
+fasta sequence file of aa sequences to compare -> distance matrix -> format distance matrix -> upgma -> newick file
 
