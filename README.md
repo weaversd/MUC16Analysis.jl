@@ -14,7 +14,7 @@ using MUC16Analysis
 fasta file of aa sequences to compare -> distance matrix -> format distance matrix -> upgma -> newick file
 
 
-**Functions**
+##Functions
 
 *to generate a distance matrix based on fasta. This returns the distance matrix as a dataframe, and saves it as a csv file*  
 *uses a substitution matrix from Ali et al., 2016 that is based on chemical differences between residues*
