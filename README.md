@@ -29,4 +29,20 @@ dist_mat_gen(fasta_file, output_file; insert, delete, describer)
 * desciber (string) is what to name the sequences (ends up as column names in the dist. mat.) default is "identifier". Other option is "description"  
 
 
+**add_missing()**
+*to format the distance matrix so it can be used in the upgma analysis. This makes it a "lower left" matrix where the diaganol and everything above and to the right of the diaganol is 'missing'. Essentially eliminates duplicate values.
+```
+add_missing(dataframe)
+```
+* dataframe (data frame object) is the data frame that will be  modified.
+
+
+**create_dm_df()**
+*to take a csv file of a distance matrix (first row is column headers) and turn it into a dataframe that can be used in upgma analysis. automatically runs `add_missing()` so the returned dataframe can be run directely with `upgma`.*
+```
+create_dm_df(csv_file)
+```
+* csv_file is the file path of csv of distance matrix to turn into a dataframe
+
+
 
