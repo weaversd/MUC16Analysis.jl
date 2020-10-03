@@ -15,7 +15,7 @@ fasta file of aa sequences to compare -> distance matrix -> format distance matr
 
 
 ## Functions for Main Workflow  
-*note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified (e.g. `upgma(dist_mat_df, ["A", "C", "J"], output = "tree_file.newick", header = false, verbose = false, distances = true) 
+*note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified (e.g. `upgma(dist_mat_df, ["A", "C", "J"], output = "tree_file.newick", header = false, verbose = false, distances = true)`*
 
 **dist_mat_gen()**
 *to generate a distance matrix based on fasta. This returns the distance matrix as a dataframe, and saves it as a csv file*  
