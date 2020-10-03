@@ -16,7 +16,7 @@ fasta file of aa sequences to compare -> distance matrix -> format distance matr
 
 ## Functions for Main Workflow  
 *Note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified  
-(e.g. `upgma(dist_mat_df, ["A", "C", "J"], output = "tree_file.newick", header = false, verbose = false, distances = true`)
+(e.g. `upgma(dist_mat_df, ["A", "C", "J"], output = "tree_file.newick", header = false, verbose = false, distances = true`)*
 
 **dist_mat_gen()**
 *to generate a distance matrix based on fasta. This returns the distance matrix as a dataframe, and saves it as a csv file*  
@@ -32,7 +32,7 @@ dist_mat_gen(fasta_file, output_file; insert, delete, describer)
 
 
 **add_missing()**
-*to format the distance matrix so it can be used in the upgma analysis. This makes it a "lower left" matrix where the diaganol and everything above and to the right of the diaganol is 'missing'. Essentially eliminates duplicate values.
+*to format the distance matrix so it can be used in the upgma analysis. This makes it a "lower left" matrix where the diaganol and everything above and to the right of the diaganol is 'missing'. Essentially eliminates duplicate values.*
 ```
 add_missing(dataframe)
 ```
@@ -48,7 +48,7 @@ create_dm_df(csv_file)
 
 
 **upgma()**
-*runs unweighted pair group method with arithmetic mean (upgma) on the distance matrix generated with `create_dm_df()` or `dist_mat_gen()` + `add_missing()`.*
+*runs unweighted pair group method with arithmetic mean (upgma) on the distance matrix generated with `create_dm_df()` or `dist_mat_gen()` + `add_missing()`. Returns newick file as a string, and saves newick as text file*
 ```
 upgma(distance_matrix, labels(optional); output, header, verbose, distances)
 ```
