@@ -1,4 +1,4 @@
-# MUC16Analysis
+# MUC16Analysis - UPGMA of amino acid sequence for phlyogenetic analysis
 
 
 To import MUC16 julia package
