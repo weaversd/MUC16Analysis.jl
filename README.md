@@ -22,8 +22,8 @@ fasta file of aa sequences to compare -> distance matrix -> format distance matr
 ```
 dist_mat_gen(fasta_file, output_file; insert, delete, describer)
 ```
-*fasta_file (string) is file path of fasta of AA sequences  
-*output_file (string) is the location where the csv of the distance matrix will be saved  
+*fasta_file (string) is file path of fasta of AA sequences 
+*output_file (string) is the location where the csv of the distance matrix will be saved
 *insert (integer) is the penalty applied for an insertion. Default is 150 (for reference: substitutions are 0-100)
 *delete (integer) is the penalty applied for a deletion. Default is 150 (for reference: substitutions are 0-100)
 *desciber (string) is what to name the sequences (ends up as column names in the dist. mat.) default is "identifier". Other option is "description"
