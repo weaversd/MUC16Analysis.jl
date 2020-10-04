@@ -3,15 +3,15 @@ uuid = "7a2b38d4-906f-4468-93f9-c96f6e540abe"
 authors = ["weaversd <sweaver4@nd.edu> and contributors"]
 version = "0.1.0"
 
-
 [deps]
+BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
+BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
-BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
 FASTX = "c2308a5c-f048-11e8-3e8a-31650f418d12"
 
 [compat]
+DataFrames = "0.21"
 julia = "1"
 
 [extras]
