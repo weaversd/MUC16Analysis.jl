@@ -11,7 +11,7 @@ using DataFrames
 #output: output file to save fasta file of repeats
 #prot_name: text of protein name to put into the fasta file as description
 #alpha is default, identifies repeats with unique letter, false identifies with number
-function subset_fasta(file::String, index_file::String, output::String, prot_name::String, alpha::Bool = true)
+function subset_sequence(file::String, index_file::String, output::String, prot_name::String, alpha::Bool = true)
     #import sequence from text file
     prot_txt_string = read(file, String)
 
@@ -70,4 +70,27 @@ function subset_fasta(file::String, index_file::String, output::String, prot_nam
 
     println("Individual repeat sequences saved to fasta file:")
     println(output)
+end
+
+#function to convert fasta file to text file
+function fasta_to_text(fasta_file::String, output_file::String)
+    seq = ""
+
+    #read the fasta file
+    r = open(FASTA.Reader, fasta_file)
+
+    #store sequence as Biosequence variable
+    for record in r
+	    global seq = sequence(record)
+    end
+
+
+    #convert to string
+    seq_str = convert(String, seq)
+
+
+    open(output_file, "w") do f
+	    write(f, seq_str)
+    end
+    println(string("saved sequence as ", output_file))
 end
