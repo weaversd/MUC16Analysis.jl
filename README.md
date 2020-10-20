@@ -59,5 +59,16 @@ upgma(distance_matrix, labels(optional); output, header, verbose, distances)
 * verbose (boolean) is whether to print all the dataframes during the production of the newick file. This can be a lot of dataframes, so only set to true for troubleshooting and if the labels are short (one or two characters) and the data frame is small (< 10 rows/colums). Default is false
 * distances (boolean) is whether to include the distance calculations in the newick file. Default is true. If false, the file will only have sample labels.
 
+## Other Included Functions
+
+**fasta_to_text()**
+*converts a one record fasta file to a text file to use with `subset_sequence()`*
+
+**subset_sequence()**
+*takes a text amino acid sequence along with a list of amino acid positions (integers), and creates a fasta file that has each subset of the amino acid sequence in its own record based on the indeces provided*
+
+**letter_list()**
+*produces an array of strings of letters (to use as labels in subset_sequence...or elsewhere) with specified length. In the order (A, B, C..., Y, Z, AA, BB..., ZZ, AAA, BBB...)
+
 
 
