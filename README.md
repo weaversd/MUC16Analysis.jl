@@ -59,6 +59,7 @@ upgma(distance_matrix, labels(optional); output, header, verbose, distances)
 * verbose (boolean) is whether to print all the dataframes during the production of the newick file. This can be a lot of dataframes, so only set to true for troubleshooting and if the labels are short (one or two characters) and the data frame is small (< 10 rows/colums). Default is false
 * distances (boolean) is whether to include the distance calculations in the newick file. Default is true. If false, the file will only have sample labels.
 
+
 ## Other Included Functions
 
 **fasta_to_text()**
@@ -75,7 +76,7 @@ fasta_to_text(fasta_file, output_file)
 subset_sequence(file, index_file, output, prot_name, alpha)
 ```
 * file (string) the filepath to the text file with the amion acid sequence to be subsetted.
-* file (string) is the filepath to the text file of sequence indeces. In this file, each line should have two integers separated by a comma (e.g. `34,79`). These coorespond to the first and the last amino acid positions in one of the sequences to be subsetted. The lines should be in sequential order.
+* index_file (string) is the filepath to the text file of sequence indeces. In this file, each line should have two integers separated by a comma (e.g. `34,79`). These coorespond to the first and the last amino acid positions in one of the sequences to be subsetted. The lines should be in sequential order.
 * output (string) the filepath where the output fasta sequence will be saved. This will be a fasta file where each record will be one of the subsetted sequences as defined by the first two arguments
 * prot_name (string) the name of the protein being subsetted (this goes in the description of each fasta record)
 * alpha (Boolean) whether the identifier in the fasta file is letters, or numbers. Default is `true` which results in letters, using the `letter_list()` function. In this case, identifiers will be (A, B, C, D...X, Y, Z, AA, BB, CC..., AAA, BBB...). If false, identifiers will be ascending integers.
