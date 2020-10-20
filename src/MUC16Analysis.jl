@@ -1,6 +1,5 @@
 module MUC16Analysis
 
-include("test_function_file.jl")
 include("distance_matrix.jl")
 include("letter_list.jl")
 include("subset_fasta.jl")
