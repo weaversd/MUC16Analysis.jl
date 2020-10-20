@@ -63,12 +63,18 @@ upgma(distance_matrix, labels(optional); output, header, verbose, distances)
 
 **fasta_to_text()**
 *converts a one record fasta file to a text file to use with `subset_sequence()`*
-
+```
+fasta_to_text()
+```
 **subset_sequence()**
 *takes a text amino acid sequence along with a list of amino acid positions (integers), and creates a fasta file that has each subset of the amino acid sequence in its own record based on the indeces provided*
-
+```
+subset_sequence()
+```
 **letter_list()**
-*produces an array of strings of letters (to use as labels in subset_sequence...or elsewhere) with specified length. In the order (A, B, C..., Y, Z, AA, BB..., ZZ, AAA, BBB...)
-
+*produces an array of strings of letters (to use as labels in subset_sequence...or elsewhere) with specified length. In the order (A, B, C..., Y, Z, AA, BB..., ZZ, AAA, BBB...)*
+```
+letter_list()
+```
 
 
