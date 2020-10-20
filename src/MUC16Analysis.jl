@@ -9,7 +9,7 @@ include("upgma.jl")
 export sub_mat_ali
 export dist_mat_gen
 export letter_list
-export subset_fasta
+export subset_sequence
 export add_missing
 export minimum_cell
 export combine_strings
@@ -17,13 +17,6 @@ export combine_strings_dist
 export combine_df
 export upgma
 export create_dm_df
-
-#testing, not used:
-function test()
-  println("This works")
-end
-
-export test
-export test2
+export fasta_to_text
 
 end #module
