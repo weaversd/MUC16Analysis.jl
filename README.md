@@ -64,17 +64,26 @@ upgma(distance_matrix, labels(optional); output, header, verbose, distances)
 **fasta_to_text()**
 *converts a one record fasta file to a text file to use with `subset_sequence()`*
 ```
-fasta_to_text()
+fasta_to_text(fasta_file, output_file)
 ```
+* fasta_file (string) is the filepath to the fasta file to be converted
+* output_file (string) is the filepath where the output text file is saved
+
 **subset_sequence()**
 *takes a text amino acid sequence along with a list of amino acid positions (integers), and creates a fasta file that has each subset of the amino acid sequence in its own record based on the indeces provided*
 ```
-subset_sequence()
+subset_sequence(file, index_file, output, prot_name, alpha)
 ```
+* file (string) the filepath to the text file with the amion acid sequence to be subsetted.
+* file (string) is the filepath to the text file of sequence indeces. In this file, each line should have two integers separated by a comma (e.g. `34,79`). These coorespond to the first and the last amino acid positions in one of the sequences to be subsetted. The lines should be in sequential order.
+* output (string) the filepath where the output fasta sequence will be saved. This will be a fasta file where each record will be one of the subsetted sequences as defined by the first two arguments
+* prot_name (string) the name of the protein being subsetted (this goes in the description of each fasta record)
+* alpha (Boolean) whether the identifier in the fasta file is letters, or numbers. Default is `true` which results in letters, using the `letter_list()` function. In this case, identifiers will be (A, B, C, D...X, Y, Z, AA, BB, CC..., AAA, BBB...). If false, identifiers will be ascending integers.
+
 **letter_list()**
 *produces an array of strings of letters (to use as labels in subset_sequence...or elsewhere) with specified length. In the order (A, B, C..., Y, Z, AA, BB..., ZZ, AAA, BBB...)*
 ```
-letter_list()
+letter_list(n)
 ```
-
+* n (integer) is the length of the array
 
