@@ -74,7 +74,6 @@ end
 
 #function to convert fasta file to text file
 function fasta_to_text(fasta_file::String, output_file::String)
-    seq = ""
 
     #read the fasta file
     r = open(FASTA.Reader, fasta_file)
