@@ -14,6 +14,6 @@ using CSV
     @test SUBMAT_ALI[AA_G,AA_D] === 65
     @test SUBMAT_ALI[AA_P,AA_P] === 0
     
-    example_dmdf = CSV.readjoinpath(dirname(@__FILE__), "data_files", "example.csv")
+    example_dmdf = CSV.read(joinpath(dirname(@__FILE__), "data_files", "example.csv"))
     println(example_dmdf)
 end
