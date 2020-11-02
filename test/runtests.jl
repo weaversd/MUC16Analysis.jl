@@ -2,5 +2,7 @@ using MUC16Analysis
 using Test
 
 @testset "MUC16Analysis.jl" begin
-    # Write your tests here.
+    @test 10 == 10
+    @test 6+4 == 10
+    @test 6+4 == 9
 end
