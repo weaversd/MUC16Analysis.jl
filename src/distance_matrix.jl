@@ -47,7 +47,24 @@ function dist_mat_gen(fasta_file::String, output_file::String="distance_matrix.c
     identifier_matrix = String[]
     description_matrix = String[]
 
-    #write sequence and identifier to respective arrays
+    #write sequence, description and identifier to respective arrays if necessary
+    if describer == "identifier"
+      open(FASTA.Reader, fasta_file) do reader
+        for record in reader
+            push!(repeat_matrix, sequence(record))
+            push!(identifier_matrix, identifier(record))
+        end
+       end  
+    else   
+       open(FASTA.Reader, fasta_file) do reader
+         for record in reader
+            push!(repeat_matrix, sequence(record))
+            push!(description_matrix, description(record))
+        end
+       end
+    end
+    
+    #=
     open(FASTA.Reader, fasta_file) do reader
         for record in reader
             push!(repeat_matrix, sequence(record))
@@ -55,7 +72,8 @@ function dist_mat_gen(fasta_file::String, output_file::String="distance_matrix.c
             push!(identifier_matrix, identifier(record))
         end
     end
-
+    =#
+    
     #import distance matrix:
     ALI_SUBMAT = sub_mat_ali()
 
