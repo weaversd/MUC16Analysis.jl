@@ -17,6 +17,7 @@ using CSV
     #run upgma on example dataframe
     example_dmdf = CSV.read(joinpath(dirname(@__FILE__), "example.csv"))
     add_missing(example_dmdf)
-    example_newick = upgma(example_dmdf, output = "example_file_whereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeisthis.tree", verbose = true)
+    example_newick = upgma(example_dmdf, output = "example.tree", verbose = true)
     println(example_newick)
+    @test example_newick == "((((A:4.0,D:4.0):4.25,((B:0.5,F:0.5):5.75,G:6.25):2.0):6.25,C:14.5):2.5,E:17.0);"
 end
