@@ -4,7 +4,7 @@ include("distance_matrix.jl")
 include("letter_list.jl")
 include("subset_fasta.jl")
 include("upgma.jl")
-include("data_files/ali_submat.csv")
+#include("data_files/ali_submat.csv")
 
 export sub_mat_ali
 export dist_mat_gen
