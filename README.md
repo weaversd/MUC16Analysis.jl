@@ -1,7 +1,7 @@
 # MUC16Analysis - UPGMA of amino acid sequence for phlyogenetic analysis
 
 
-To import MUC16 julia package
+To import MUC16Analysis julia package
 
 ```
 using Pkg
@@ -9,6 +9,11 @@ Pkg.add(PackageSpec(url="https://github.com/weaversd/MUC16Analysis.jl.git"))
 using MUC16Analysis
 ```
 
+To test the package
+
+```
+Pkg.test("MUC16Analysis")
+```
 
 **main workflow:**  
 fasta file of aa sequences to compare -> distance matrix -> format distance matrix -> upgma -> newick file
