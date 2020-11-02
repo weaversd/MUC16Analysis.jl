@@ -6,6 +6,10 @@ include("subset_fasta.jl")
 include("upgma.jl")
 #include("data_files/")
 
+using CSV
+using DataFrames
+ali_df = CSV.read(data_files/ali_submat.csv)
+
 export sub_mat_ali
 export dist_mat_gen
 export letter_list
@@ -18,5 +22,6 @@ export combine_df
 export upgma
 export create_dm_df
 export fasta_to_text
+export ali_df
 
 end #module
