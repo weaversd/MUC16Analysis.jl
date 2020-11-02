@@ -17,6 +17,6 @@ using CSV
     #run upgma on example dataframe
     example_dmdf = CSV.read(joinpath(dirname(@__FILE__), "example.csv"))
     add_missing(example_dmdf)
-    example_newick = upgma(example_dmdf, output = "example.tree", verbose = true)
-    println(example_newickk)
+    example_newick = upgma(example_dmdf, output = "example_file_whereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeisthis.tree", verbose = true)
+    println(example_newick)
 end
