@@ -7,7 +7,7 @@ using DataFrames
 using FASTX
 
 #create the substitution matrix, derived from Ali et al.
-function sub_mat_ali(;submat_csv::String="data_files/ali_submat.csv")
+function sub_mat_ali(;submat_csv::String=joinpath(dirname(@__FILE__), "data_files", "ali_submat.csv"))
     ali_df = CSV.read(submat_csv)
     n = nrow(ali_df)
 
