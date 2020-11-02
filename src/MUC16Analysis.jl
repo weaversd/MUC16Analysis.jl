@@ -6,11 +6,11 @@ include("subset_fasta.jl")
 include("upgma.jl")
 #include("data_files/")
 
-using CSV
-using DataFrames
-println("trying to read csv")
+#using CSV
+#using DataFrames
+#println("trying to read csv")
 
-ali_df = CSV.read(joinpath(dirname(@__FILE__), "data_files", "ali_submat.csv"))
+#ali_df = CSV.read(joinpath(dirname(@__FILE__), "data_files", "ali_submat.csv"))
 #variable_test = 10
 #println(variable_test)
 
@@ -26,7 +26,7 @@ export combine_df
 export upgma
 export create_dm_df
 export fasta_to_text
-export ali_df
+#export ali_df
 #export variable_test
 
 end #module
