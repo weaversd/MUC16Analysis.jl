@@ -2,6 +2,7 @@ using MUC16Analysis
 using BioSequences
 using DataFrames
 using Test
+using CSV
 
 @testset "MUC16Analysis.jl" begin
     @test 10 == 10 #just to make sure test is working
