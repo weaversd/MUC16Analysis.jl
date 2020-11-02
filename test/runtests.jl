@@ -20,4 +20,9 @@ using CSV
     example_newick = upgma(example_dmdf, output = "example.tree", verbose = true)
     println(example_newick)
     @test example_newick == "((((A:4.0,D:4.0):4.25,((B:0.5,F:0.5):5.75,G:6.25):2.0):6.25,C:14.5):2.5,E:17.0);"
+    
+    #run upgma on example distance matrix by different method
+    example_dmdf2 = create_dm_df(joinpath(dirname(@__FILE__), "example.csv"))
+    example_newick2 = upgma(example_dfdf2, output = "example2.tree", verbose = true)
+    @test example_newick2 == "((((A:4.0,D:4.0):4.25,((B:0.5,F:0.5):5.75,G:6.25):2.0):6.25,C:14.5):2.5,E:17.0);"
 end
