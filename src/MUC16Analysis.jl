@@ -6,6 +6,7 @@ include("subset_fasta.jl")
 include("upgma.jl")
 #include("data_files/")
 
+###
 using CSV
 using DataFrames
 println("trying to read csv")
@@ -14,6 +15,7 @@ println("trying to read csv")
 #ali_df = CSV.read("MUC16Analysis.jl/src/data_files/ali_submat.csv")
 variable_test = 10
 println(variable_test)
+###
 
 export sub_mat_ali
 export dist_mat_gen
