@@ -15,7 +15,7 @@ To test the package
 Pkg.test("MUC16Analysis")
 ```
 
-**main workflow:**  
+**<ins>Main Workflow:</ins>** 
 fasta file of aa sequences to compare -> distance matrix -> format distance matrix -> upgma -> newick file
 
 
