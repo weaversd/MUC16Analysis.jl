@@ -1,4 +1,5 @@
 using MUC16Analysis
+using BioSequences
 using Test
 
 @testset "MUC16Analysis.jl" begin
