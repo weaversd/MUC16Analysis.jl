@@ -8,6 +8,7 @@ include("upgma.jl")
 
 using CSV
 using DataFrames
+println("trying to read csv")
 ali_df = CSV.read(data_files/ali_submat.csv)
 
 export sub_mat_ali
