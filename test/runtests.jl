@@ -14,6 +14,9 @@ using CSV
     @test SUBMAT_ALI[AA_G,AA_D] === 65
     @test SUBMAT_ALI[AA_P,AA_P] === 0
     
+    #run upgma on example dataframe
     example_dmdf = CSV.read(joinpath(dirname(@__FILE__), "example.csv"))
-    println(example_dmdf)
+    add_missing(example_dmdf)
+    example_newick = upgma(example_dmdf, output = "example.tree", verbose = true)
+    println(example_newickk)
 end
