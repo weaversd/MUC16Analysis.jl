@@ -1,6 +1,6 @@
 #!/usr bin/env julia
 
-#function to generate alphabet list for naming purposes
+#function to generate alphabet list for fasta naming purposes
 
 function letter_list(letter_count::Int64)
 
