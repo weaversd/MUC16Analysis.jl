@@ -26,7 +26,7 @@ using CSV
     example_newick2 = upgma(example_dmdf2, output = "example2.tree", verbose = true)
     @test example_newick2 == "((((A:4.0,D:4.0):4.25,((B:0.5,F:0.5):5.75,G:6.25):2.0):6.25,C:14.5):2.5,E:17.0);"
     
-    #create distance matrix
+    #create distance matrix from sample fasta. Fasta sequences for test were randomly generated.
     example_dm_fromfasta = dist_mat_gen(joinpath(dirname(@__FILE__), "example.fasta"), "example_dm_fromfasta.csv")
     @test nrow(example_dm_fromfasta) == 10
     add_missing(example_dm_fromfasta)
