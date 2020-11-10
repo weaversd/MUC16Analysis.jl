@@ -18,6 +18,10 @@ Pkg.test("MUC16Analysis")
 **<ins>Main Workflow:</ins>** 
 fasta file of aa sequences to compare -> distance matrix -> format distance matrix -> upgma -> newick file
 
+It is possible to run UPGMA clustering on any distance matrix (doesn't have to be from protein sequences). To do this, the distance matrix must be in a csv file where the first row is column names (these are the leaf names in the tree). The rows don't have labels, but the order must be the same as the columns (which will result in 0's in the diaganol). See below for an example:
+
+
+If this is the case you can run `create_dm_df()` with the csv file, followed by `upgma()` which will perform the clustering. Alternatively, you can create a distance matrix in the same format described above as a DataFrame object in julia, and run `add_missing()` on it, followed by `upgma()`.
 
 ## Functions for Main Workflow  
 *Note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified. This is most important in `upgma()`. 
