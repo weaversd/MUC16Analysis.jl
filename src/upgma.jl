@@ -1,4 +1,4 @@
-#Implementation of UPGMA in julia to output a Newick string. Either with or without distances. upgma() is the public function
+#Implementation of UPGMA in julia to output a Newick format string. Either with or without distances. upgma() is the main function
 
 #modules required
 using DataFrames
