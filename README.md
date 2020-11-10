@@ -20,7 +20,7 @@ fasta file of aa sequences to compare -> distance matrix -> format distance matr
 
 
 ## Functions for Main Workflow  
-*Note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified  
+*Note that arguments prior to ';' do not have keywords and are positional. Arguments after ';' need the keyword specified. This is most important in `upgma`. 
 (e.g. `upgma(dist_mat_df, ["A", "C", "J"], output = "tree_file.tree", header = false, verbose = false, distances = true`)*
 
 **dist_mat_gen()**
