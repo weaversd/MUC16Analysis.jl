@@ -20,6 +20,7 @@ fasta file of aa sequences to compare -> distance matrix -> format distance matr
 
 It is possible to run UPGMA clustering on any distance matrix (doesn't have to be from protein sequences). To do this, the distance matrix must be in a csv file where the first row is column names (these are the leaf names in the tree). The rows don't have labels, but the order must be the same as the columns (which will result in 0's in the diaganol). See below for an example:
 
+![Image of example distance matrix](example_distance_matrix.png)
 
 If this is the case you can run `create_dm_df()` with the csv file, followed by `upgma()` which will perform the clustering. Alternatively, you can create a distance matrix in the same format described above as a DataFrame object in julia, and run `add_missing()` on it, followed by `upgma()`.
 
